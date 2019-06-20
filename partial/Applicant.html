@@ -1,0 +1,198 @@
+﻿<style>
+
+    button .glyphicon {color:black !important;}
+
+    .btn-success {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+     .btn-success:active {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+    .dds {
+
+        margin-left:300px;
+        font-size:12px;
+        font-weight:bold;
+    }
+    .btn-success:hover {
+
+        background-color:#7F7F7F;
+        border-color:#7F7F7F;
+        text-shadow:none !important;
+
+       
+    }
+
+
+
+
+
+        .form-control {
+        background-color: #939393;
+        color: white;
+    }
+
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    input:-moz-placeholder, textarea:-moz-placeholder {
+        color: white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .panel-info > .panel-heading {
+        background-color: white;
+    }
+
+    .panel-title {
+        color: #3D3D3D;
+        font-weight: bold;
+        padding-left: 70px;
+    }
+
+    #btn-signup {
+        background-color: #06FBB5;
+        cursor: pointer;
+    }
+
+    #fgpassword {
+        color: #CCCCCC;
+        font-weight: bold;
+    }
+
+    #loginbox2 {
+        background-image: url('images/bbimage.png');
+        background-repeat:repeat-x;
+    }
+
+
+    .input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    background-color: #939393;
+   
+}
+
+
+</style>
+<div class="container-fluid" ng-show="agentRole.Agent">
+
+    <br />
+    <br />
+    <div class="row ">
+
+        <div class="col-md-8 col-md-offset-2">
+            <img src="images/ApplicationStatus.png" class="img-responsive" />
+
+
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-2 ">
+
+            <div class="dds"> Applicant Information Form</div>
+
+
+
+        </div>
+    </div>
+
+    <br />
+
+
+
+    <div> <form id="signupform" name="userForm" novalidate >
+
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-2">
+
+            <div class="col-md-10">
+                <input id="login-username" type="text" class="form-control " name="username" required ng-model="ApplicantForm.firstname" placeholder="Applicant Name">
+
+
+            </div>
+
+
+      
+
+
+
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-2">
+
+            <div class="col-md-10">
+                <input id="login-username" type="text" class="form-control " name="username22" required ng-model="ApplicantForm.Address" placeholder="Address">
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-2">
+
+            <div class="col-md-5">
+                <input id="login-username" type="email" class="form-control " name="username" required ng-model="ApplicantForm.Email" placeholder="Email Address">
+
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <input id="login-username" type="tel" class="form-control " name="username2" required ng-model="ApplicantForm.Phonenumber" placeholder="Phone Number">
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div>
+            <button id="btn-signup" ng-click="submitForm(userForm.$valid)" class="btn-success btn-lg center-block" style="font-weight:bold ;font-size:10px ;" type="submit">  Proceed &nbsp <i class="glyphicon glyphicon-arrow-right"></i> </button>
+            <!--<span style="margin-left:8px;">or</span>-->
+        </div>
+
+    </div>
+</form>
+</div>
+
+    </div>
+

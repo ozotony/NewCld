@@ -1,0 +1,156 @@
+﻿<div class="container">
+
+ 
+    <table class="table table-responsive table-bordered ">
+        <tr>
+            <td style="align-content:center"></td>
+
+            <td>
+                <input type="text" ng-model="OnlineNumber" data-tooltip="Tp Number" class="form-control" id="OnlineNumber" placeholder="Tp Number">
+
+            </td>
+
+            <td>
+
+
+                <button type="button" ng-click="add()" class="btn   btn-info "><i class="fa fa-search"></i>Search</button>
+
+            </td>
+
+        </tr>
+
+
+    </table>
+    <div class="row col-lg-11 col-md-11">
+        <table st-table="displayedCollection" st-safe-src="ListAgent" class="table form table-responsive  col-lg-3 col-md-3  table-striped">
+            <thead>
+                <tr>
+                    
+                    <th class="tbbg2">S/N</th>
+
+
+                    <th st-sort="oai_no" class="tbbg2">OAI NUMBER</th>
+                    <th st-sort="reg_dt" class="tbbg2">FILING DATE</th>
+                    <th st-sort="reg_no" class="tbbg2"> FILE No</th>
+                    <th st-sort="applicant_name" class="tbbg2">APPLICANT NAME</th>
+                    <th st-sort="product_title" class="tbbg2">PRODUCT TITLE</th>
+                    <th st-sort="product_title" class="tbbg2">AGENT CODE</th>
+                    <th st-sort="product_title" class="tbbg2">AGENT NAME</th>
+                    <th st-sort="product_title" class="tbbg2">CLASS</th>
+                    <th st-sort="product_title" class="tbbg2">STATUS</th>
+
+
+
+
+                    <th class="tbbg2">Appeal</th>
+
+                    <th class="tbbg2"></th>
+
+
+
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in displayedCollection">
+
+                   
+                    <td align="center">{{row.Sn}}</td>
+
+
+                    <td>{{row.oai_no}}</td>
+                    <td>{{row.reg_dt}}</td>
+                    <td>{{row.reg_no}}</td>
+                    <td>{{row.applicant_name}}</td>
+                    <td>{{row.product_title}}</td>
+                    <td>{{row.Agent_Code}}</td>
+                    <td>{{row.Agent_Name}}</td>
+                    <td>{{row.xclass}}</td>
+                    <td>{{row.xstat}}</td>
+
+
+
+
+
+                    <td align="center">
+
+                        <a target="_blank" ng-click="add2(row); $event.preventDefault(); $event.stopPropagation();" class="icon-bar" href="#"> Click To Appeal</a>
+
+
+                    </td>
+
+                    <td align="center" ng-show="myValue">
+
+                        <a target="_blank" ng-click="add22(row); $event.preventDefault(); $event.stopPropagation();" class="icon-bar" href="#"> View Reject Slip</a>
+
+
+                    </td>
+
+
+
+
+
+
+
+
+
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="10" class="text-center">
+                        <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+
+
+    </div>
+
+    <div ng-show="myValue" style="top: 0; width: 80%; height:  auto; margin:  auto;">
+        <div class="pageheader blue"><p style="height: 100%; font-size: 18px">Appeal Refusal</p></div>
+        <div class="pageheader blue"><p style="height: 100%; font-size: 18px"></p></div>
+        <div class="form-group">
+            <label for="email">Comment</label>
+            <div>
+                <textarea rows="4" cols="50" ng-model="Vcomment">
+
+</textarea>
+
+
+            </div>
+        </div>
+        <br />
+        <br />
+
+
+
+        <div class="form-group">
+            <label for="email">Upload</label>
+            <div>
+                <input type="file" id="File1" class="form-control" />
+
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        <div class="form-group" style="text-align: center; padding-top: 10px">
+            <input type="button" value="Submit" class="btn btn-default" ng-click="submitForm()" />
+        </div>
+
+    </div>
+
+    
+
+
+
+   
+
+</div>
